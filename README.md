@@ -12,6 +12,7 @@ The chatbot maintains conversation history so it can understand follow-up questi
 - 🔄 Interactive command-line interface
 - 🔐 Uses environment variables to securely store the API key
 - 🐍 Built with Python and LangChain
+- ⚙️ Uses system messages to define AI assistant behavior
 
 ## 🛠️ Technologies Used
 
@@ -145,6 +146,15 @@ AI: 14
 ```
 
 The model receives the previous conversation along with the new question, allowing it to understand the context.
+
+## ⚙️ System Message
+
+The chatbot uses a `SystemMessage` to define the behavior of the AI assistant.
+
+```python
+chat_history = [
+    SystemMessage(content="You are a helpful AI assistant")
+]
 
 ## 📌 Learning Objective
 
